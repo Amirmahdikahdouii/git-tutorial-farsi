@@ -138,17 +138,66 @@ body {
     cursor: pointer;
 }
 
+/*
+    Animation to show copy icon and hide it
+*/
+@keyframes hideCopyIcon {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes showCopyIcon {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 svg[cssClass="copy-icon"] {
+    display: block;
     color: #A5C9CA;
+    animation-name: showCopyIcon;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
     transition: all 300ms;
 }
 
 svg[cssClass="copy-icon-done"] {
     display: none;
+    animation-name: hideCopyIcon;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
 }
 
 svg[cssClass="copy-icon"]:hover {
     color: #395B64;
+}
+
+svg[cssClass="copy-icon-hide"] {
+    animation-name: hideCopyIcon;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    display: none;
+}
+
+svg[cssClass="copy-icon-done-show"] {
+    animation-name: showCopyIcon;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    display: block;
 }
 
 .code-body-container {

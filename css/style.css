@@ -61,6 +61,7 @@ body {
 }
 
 .main-contaier {
+    padding: .5% 0 1%;
     margin: 2% auto;
     width: 75%;
     min-height: 150vh;

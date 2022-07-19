@@ -238,7 +238,6 @@
             حالا به فولدر مون یه فایل جدید به اسم <span class="en-little-text">index.html</span> اضافه میکنیم.
         </p>
         <h3 class="section-header-title  section-header-title-en">git status</h3>
-
         <p class="section-tip-container">
             از این دستور برای مشاهده وضعیت دایرکتوری گیت استفاده میکنیم.
         </p>
@@ -302,7 +301,411 @@
                 وضعیت قرار میگیرن!
             </li>
         </ul>
-
+        <h3 class="section-header-title  section-header-title-en">git Staging Environment</h3>
+        <p class="section-tip-container">
+            به محیطی که فایل های <span class="en-little-text">Tracked</span> و <span
+                class="en-little-text">Untracked</span> در اون قرار میگیرن تا برای مرحله ذخیره سازی در مخزن بررسی بشن،
+            محیط <span class="en-little-text">Stage</span> گفته میشه. توی این محیط فایل ها یه بررسی میشن تا اگه نیاز به
+            تغییراتی هست که قبل از کامیت و ذخیره شدن توی مخزن به عنوان یه مرحله، باید انجام بشه، اعمال بشه و بعد از اون
+            هم کامیت شدن اتفاق میوفته. برای اینکه فایل هامون رو استیج کنیم از دستور زیر استفاده میکنیم.
+        </p>
+        <h3 class="section-header-title  section-header-title-en">git add</h3>
+        <p class="section-tip-container">
+            از دستور <span class="en-little-text">git add</span> برای استیج کردن فایل ها استفاده میشه.
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git add filename</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+        </div>
+        <h3 class="section-header-title">مثال</h3>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git add index.html</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            حالا که تغییرات فایل رو به محیط استیج بردیم، وضعیتش رو بررسی میکنیم.
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git status</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        On branch master
+                        <br>
+                        No commits yet
+                        <br>
+                        Changes to be committed:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;(use "git rm --cached ..." to unstage)
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;new file: index.html
+                    </span>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-header-title">اضافه کردن همه تغییرات به محیط استیج: </h3>
+        <p class="section-tip-container">
+            بیاین به دایرکتوری پروژه یک فایل برای معرفی پروژه به اسم <span class="en-little-text">README.md</span> و یک
+            فایل برای استایل صفحه به اسم <span class="en-little-text">style.css</span> داخل یک فولدر به نام <span
+                class="en-little-text">css</span> اضافه کنیم.
+        </p>
+        <h3 class="section-header-title section-header-title-en">index.html: </h3>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        &lt;!DOCTYPE html&gt; <br>
+                        &lt;html&gt; <br>
+                        &lt;head&gt; <br>
+                        &lt;title>Hello World!&lt;/title&gt; <br>
+                        &lt;link rel="stylesheet" href="bluestyle.css"&gt; <br>
+                        &lt;/head&gt; <br>
+                        &lt;body&gt; <br>
+                        &lt;h1&gt;Hello world&lt;/h1&gt; <br>
+                        &lt;p&gt;This is the first file in my new Git Repo&lt;/p&gt; <br>
+                        &lt;/body&gt; <br>
+                        &lt;/html&gt; <br>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-header-title section-header-title-en">css/style.css: </h3>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        body { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;<br>
+                        }<br>
+                        h1 {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: navy;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 20px;<br>
+                        }<br>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-header-title section-header-title-en">README.md: </h3>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        # hello-world <br>
+                        Hello World repository for Git tutorial <br>
+                        This repository is built step by step in the tutorial. <br>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            حالا برای اضافه کردن همه تغییرات به محیط استیج ار یکی از سه دستور زیر استفاده میکنیم. هر سه دستور دقیقا همه
+            ی تغییرات ما رو به محیط استیج اضافه خواهند کرد.
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git add -A</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+        </div>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git add --all</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+        </div>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git add .</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            حالا وضعیت مخزن رو بررسی میکنیم:
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git status</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        On branch master <br>
+                        <br>
+                        No commits yet <br>
+                        <br>
+                        Changes to be committed: <br>
+                        &nbsp;&nbsp;(use "git rm --cached ..." to unstage) <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new folder: css/ <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new file: README.md <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new file: index.html <br>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            هر سه فایل به محیط استیج اضافه شدن و آماده این هستن که ما اونها رو <span
+                class="en-little-text">commit</span> کنیم.
+        </p>
+        <h3 class="section-header-title section-header-title-en">git commit</h3>
+        <p class="section-tip-container">
+            از اونجایی که کار ما تموم شده میخوایم که تغییرات رو از مرحله <span class="en-little-text">Stage</span> به
+            <span class="en-little-text">commit</span> تبدیل کنیم.
+        </p>
+        <ul class="section-menu-container">
+            <li class="section-menu-item section-menu-item-header">
+                <span class="en-little-text">commit</span> کردن به ما این امکان رو میده تا:
+            </li>
+            <li class="section-menu-item">
+                - بتونیم تغییرات فایل ها رو ذخیره کنیم
+            </li>
+            <li class="section-menu-item">
+                - بتونیم بعدا از جایی که تغییرات رو ذخیره کردیم برگردیم و روال پروژه رو جلو
+                ببریم
+            </li>
+            <li class="section-menu-item">
+                - باید برای هر <span class="en-little-text">commit</span> یه پیام در نظر
+                بگیریم تا هم خودمون هم افرادی که بعدا قرار هست تا از پروژه ما استفاده کنن به راحتی بتونن بفهمن که توی هر
+                مرحله چه روال هایی انجام شده و راحت تر پروژه شون رو درک کنن و توسعه بدن!
+            </li>
+            <li class="section-menu-item">
+                - با گذاشتن یه پیغام مناسب برای هر <span class="en-little-text">commit</span>
+                افراد راحت تر روال ها رو میفهمن!
+            </li>
+        </ul>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git commit -m "message"</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+        </div>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git commit -m "First commit for our repo"</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        [master (root-commit) 221ec6e] First commit for our repo <br>
+                        3 files changed, 26 insertions(+) <br>
+                        create mode 100644 css/ <br>
+                        create mode 100644 index.html <br>
+                        create mode 100644 README.md <br>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-header-title">نکته: </h3>
+        <p class="section-tip-container">
+            تگ <span class="en-little-text">-m</span> برای دستور <span class="en-little-text">commit</span> قابلیت این
+            رو میده که بتونیم پیغامی رو برای هر کامیت ذخیره کنیم.
+        </p>
     </section>
 </body>
 

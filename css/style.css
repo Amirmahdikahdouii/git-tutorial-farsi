@@ -6,6 +6,11 @@
     text-decoration: none;
 }
 
+a {
+    color: #395B64;
+    font-weight: bold;
+}
+
 /*
     Fonts section
 */

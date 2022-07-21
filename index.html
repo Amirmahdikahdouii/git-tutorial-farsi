@@ -431,7 +431,7 @@
                         &lt;html&gt; <br>
                         &lt;head&gt; <br>
                         &lt;title>Hello World!&lt;/title&gt; <br>
-                        &lt;link rel="stylesheet" href="bluestyle.css"&gt; <br>
+                        &lt;link rel="stylesheet" href="./css/style.css"&gt; <br>
                         &lt;/head&gt; <br>
                         &lt;body&gt; <br>
                         &lt;h1&gt;Hello world&lt;/h1&gt; <br>
@@ -720,7 +720,7 @@
                         &lt;html&gt; <br>
                         &lt;head&gt; <br>
                         &lt;title>Hello World!&lt;/title&gt; <br>
-                        &lt;link rel="stylesheet" href="bluestyle.css"&gt; <br>
+                        &lt;link rel="stylesheet" href="./css/style.css"&gt; <br>
                         &lt;/head&gt; <br>
                         &lt;body&gt; <br>
                         &lt;h1&gt;Hello world&lt;/h1&gt; <br>
@@ -888,6 +888,465 @@
                 </div>
             </div>
         </div>
+        <p class="section-tip-container">
+            اگه تعداد لاگ های گیت تون خیلی زیاد باشه میتونین با کلید های بالا و پایین <span
+                class="en-little-text">&#8593;</span>, <span class="en-little-text">&#8595;</span> لاگ ها رو بررسی کنید
+            و برای رفتن
+            به آخر فایل از <span class="en-little-text">shift + G</span> و برای خارج شدن از اون از کلید
+            <span class="en-little-text">q</span> استفاده کنین.
+        </p>
+        <h3 class="section-header-title section-header-title-en">git help</h3>
+        <p class="section-tip-container">
+            اگه دستورات و طرز کار اونها یادتون رفت یا میخواستین که درباره کاربرد یه دستور و فلگ هاش به طور خلاصه مطالعه
+            کنین، گیت برای ما دستور زیر رو تعریف کرده تا بتونیم به راحتی به طور خیلی خلاصه درباره دستورات، فلگ ها یا
+            آپشن های هر دستور، اطلاعات بگیریم.
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git command --help</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            با دستور بالا و قرار دادن نام دستور مورد نظرمون به جای کلمه <span class="en-little-text">command</span>
+            میتونیم تمامی آپشن هایی که برای اون دستور در نظر گرفته شده رو مشاهده کنیم.
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git help -a</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git help --all</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            با زدن دستور بالا، لیست تمامی دستوراتی که برای گیت وجود دارن رو میتونیم مشاهده کنیم.
+        </p>
+        <h3 class="section-header-title section-header-title-en">git branch</h3>
+        <p class="section-tip-container">
+            <span class="en-little-text">branch</span> ها در گیت، یک ورژن یا نسخه جدید از پروژه اصلی هستن. بیاین با یه
+            مثال این مورد رو بررسی کنیم:
+            <br>
+            فرض کنید که شما یک پروژه بزرگ دارین و میخواین که برای این پروژه، تغییرات جدید اعمال کنین:
+        </p>
+        <ul class="section-menu-container">
+            <li class="section-menu-item section-menu-item-header">
+                بدون استفاده از گیت:
+            </li>
+            <li class="section-menu-item">
+                - یک کپی از کل پروژه میگیریم تا روی پروژه اصلی تغییرات ندیم که به مشکل بخوریم.
+            </li>
+            <li class="section-menu-item">
+                - شروع به کار کردن روی دیزان پروژه میکنیم و قسمتی که میخوایم تغییر بدیم رو پیدا میکنیم و روی اون تغییرات
+                رو شروع میکنیم.
+            </li>
+            <li class="section-menu-item">
+                - از تمامی وابستگی هایی که نسبت به قطعه کدی که ما تغییرش دادیم مطمئن میشیم تا به باگ نخوریم.
+            </li>
+            <li class="section-menu-item">
+                - یهو به یه مشکل جدی توی کل پروژه برخورد میکنیم چون تغییراتی که دادیم باعث شده یه جایی از پروژه باگ
+                ایجاد بشه. بخاطر همین اول سراغ باگ میریم تا اون رو حل کنیم.
+            </li>
+            <li class="section-menu-item">
+                - بعد از رفع مشکل تمامی تغییرات رو ذخیره میکنیم و برای کد ها کامنت مینویسیم که تغییر داده شدن.
+            </li>
+            <li class="section-menu-item">
+                - روی دیزان که هدف اصلی مون بود شروع به کار میکنیم و کار اینجا رو هم تموم میکنیم
+            </li>
+            <li class="section-menu-item">
+                - یک کپی از فایل جدید میگیریم تا برای پابلیش کردن به جای فایل قبلی روی سرور ببریم.
+            </li>
+            <li class="section-menu-item">
+                - فایل جدید رو با فایل قبلی عوض میکنیم و خوشحال و راضی از همه چی به استراحت میریم اما...
+            </li>
+            <li class="section-menu-item">
+                - بعدا مشخص میشه که یه باگ توی پروژه به خاطر تغییرات مون پیش اومده و باید تمام این مراحل رو با پیچیدگی
+                بیشتر از اول انجام بدیم.
+            </li>
+        </ul>
+        <ul class="section-menu-container">
+            <li class="section-menu-item section-menu-item-header">
+                استفاده از گیت:
+            </li>
+            <li class="section-menu-item">
+                - یک <span class="en-little-text">branch</span> جدید ایجاد میکنیم و اسمش رو برای مثال <span
+                    class="en-little-text">new-design</span> میزاریم. که کاملا از پروژه اصلی جداست و به اون آسیبی نمیزنه
+            </li>
+            <li class="section-menu-item">
+                - حالا به یه باگ اساسی توی پروژه خوردیم که باید هر چه سریعتر رفع بشه.
+            </li>
+            <li class="section-menu-item">
+                - یک <span class="en-little-text">branch</span> جدید از پروژه اصلی به نام <span
+                    class="en-little-text">small-error-fix</span> میسازیم و باگ رو اونجا رفع میکنیم
+            </li>
+            <li class="section-menu-item">
+                - برگردیم به <span class="en-little-text">branch</span> که برای تغییر دیزاین پروژه داشتیم و کار خودمون
+                رو اینجا تموم کنیم.
+            </li>
+            <li class="section-menu-item">
+                - حالا این <span class="en-little-text">branch</span> رو با نسخه اصلی پروژه ادغام یا <span
+                    class="en-little-text">merge</span> میکنیم. ممکنه برای اینکه باگ قبلا با پروژه اصلی همراه شده و اون
+                رو رفع کردن به ما یه هشدار بده ولی ما میتونیم خیلی راحت ادغام رو با انجام تغییرات کوچیک انجام بدیم.
+            </li>
+        </ul>
+        <p class="section-tip-container">
+            <span class="en-little-text">branch</span> ها به ما این امکان رو میدن تا بدون دستکاری پروژه اصلی، روی قسمتی
+            از پروژه به صورت مجزا کار کنیم و بعدا اون رو به پروژه اصلی اضافه کنیم.
+        </p>
+        <p class="section-tip-container">
+            شما میتونید روی شاخه های مختلف، <span class="en-little-text">branch</span> های مختلف، به صورت جدا کار کنین
+            بدون اینکه روی هم اثر بزارن.
+        </p>
+        <p class="section-tip-container">
+            <span class="en-little-text">branch</span> ها خیلی سبک تر از کپی یک نسخه جدید از کل پروژه هستن!
+        </p>
+        <h3 class="section-header-title section-header-title-en">git new branch</h3>
+        <p class="section-tip-container">
+            بیاین فایل <span class="en-little-text">index.html</span> رو تغییر بدیم. اما نمیخوایم که روی پروژه اصلی این
+            کار انجا بشه. برای این کار از <span class="en-little-text">branch</span> استفاده میکنیم. برای همین کار بیاین
+            یک <span class="en-little-text">branch</span> جدید ایجاد کنیم:
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git branch change-index-page</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            برای اینکه مطمئن بشیم <span class="en-little-text">branch</span> جدید ساخته شده یا نه، از دستور زیر کمک
+            میگیریم. این دستور لیست تمامی <span class="en-little-text">branch</span> هایی که داریم رو به ما نشون میده.
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git branch</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        &nbsp;&nbsp;change-index-page <br>
+                        &nbsp;&nbsp;* master
+                    </span>
+                </div>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            کنار نام یک <span class="en-little-text">branch</span> به نام <span class="en-little-text">master</span> یک
+            علامت <span class="en-little-text">*</span> میبینید. این علامت به معنی اینه که تغییراتی که انجام بدین روی
+            این <span class="en-little-text">branch</span> اتفاق میوفته و نشون میده شما در حال حاضر روی کدوم <span
+                class="en-little-text">branch</span> هستین!
+        </p>
+        <p class="section-tip-container">
+            حالا که شاخه جدید پروژه مون رو ساختیم، تغییرات رو روی اون اعمال کنیم. برای این کار اول باید <span
+                class="en-little-text">branch</span> پروژه مون رو عوض کنیم:
+        </p>
+        <h3 class="section-header-title section-header-title-en">git checkout &lt;branch name&gt;</h3>
+        <p class="section-tip-container">
+            حالا که شاخه جدید پروژه مون رو ساختیم، تغییرات رو روی اون اعمال کنیم. برای این کار اول باید <span
+                class="en-little-text">branch</span> پروژه مون رو عوض کنیم:
+        </p>
+        <p class="section-tip-container">
+            دستور <span class="en-little-text">checkout</span> دستوریه که برای ما تعویض <span
+                class="en-little-text">branch</span> ها روانجام میده. بیاین با استفاده از این دستور به <span
+                class="en-little-text">branch</span> جدیدی که ساختیم تعویض شاخه کنیم.
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git checkout change-index-page</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        Switched to branch 'change-index-page'
+                    </span>
+                </div>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            تعویض محیط کار یا <span class="en-little-text">work space</span> ما انجام شد و تغییرات جدید روی این محیط فقط
+            اعمال میشن.
+            <br>
+            حالا بیاین فایل <span class="en-little-text">index.html</span> رو تغییر بدیم:
+        </p>
+        <h3 class="section-header-title section-header-title-en">index.html: </h3>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        &lt;!DOCTYPE html&gt; <br>
+                        &lt;html&gt; <br>
+                        &lt;head&gt; <br>
+                        &lt;title>Hello World!&lt;/title&gt; <br>
+                        &lt;link rel="stylesheet" href="./css/style.css"&gt; <br>
+                        &lt;/head&gt; <br>
+                        &lt;body&gt; <br>
+                        &lt;h1&gt;Hello world&lt;/h1&gt; <br>
+                        &lt;p&gt;This is the first file in my new Git Repo&lt;/p&gt; <br>
+                        &lt;span&gt;New line for short commit&lt;/span&gt; <br>
+                        &lt;p&gt;This is a new line from new branch called 'change-index-page' &lt;/p&gt; <br>
+                        &lt;/body&gt; <br>
+                        &lt;/html&gt; <br>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            شما تغییرتون رو روی فایل <span class="en-little-text">index.html</span> انجام دادین، حالا بیاین وضعیت رو
+            بررسی کنیم:
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git status</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        On branch change-index-page <br>
+                        Changes not staged for commit: <br>
+                        (use "git add ..." to update what will be committed) <br>
+                        (use "git restore ..." to discard changes in working directory) <br>
+                        modified: index.html <br>
+                        <br>
+                        no changes added to commit (use "git add" and/or "git commit -a") <br>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <p class="section-tip-container">
+            حالا بیاین تغییرات رو ذخیره کنیم:
+        </p>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git add index.html</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+        </div>
+        <div class="section-code-container">
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg>
+                    <span class="code-input">git commit -m "add new line in index.html in new branch"</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard" viewBox="0 0 16 16" cssClass="copy-icon">
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clipboard-check" viewBox="0 0 16 16" cssClass="copy-icon-done">
+                    <path fill-rule="evenodd"
+                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                    <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                </svg>
+            </div>
+            <div class="center section-code-row">
+                <div class="code-body-container">
+                    <span class="code-output">
+                        [change-index-page 0312c55] add new line in index.html in new branch <br>
+                        2 files changed, 1 insertion(+)
+                    </span>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-header-title">نکته :</h3>
+        <p class="section-tip-container">
+            برای اینکه یک <span class="en-little-text">branch</span> جدید بسازیم و همزمان به اون سویچ کنیم و محیط کارمون
+            به اون منتقل شه میتونیم از آپشن <span class="en-little-text">-b</span> برای دستور <span
+                class="en-little-text">checkout</span> استفاده کنیم و نام <span class="en-little-text">branch</span>
+            جدیدمون رو که میخوایم ساخته بشه بنویسیم.
+            <br>
+            این آپشن برای ما <span class="en-little-text">branch</span> جدید رو میسازه و به محیط کار مارو به اون منتقل
+            میکنه.
+        </p>
     </section>
     <script src="./js/script.js"></script>
 </body>

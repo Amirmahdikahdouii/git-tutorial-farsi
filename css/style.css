@@ -250,3 +250,23 @@ svg[cssClass="copy-icon-done-show"] {
     font-weight: bold;
     font-family: section-code-output;
 }
+
+.section-image-container{
+    margin: 1% auto;
+    width: 88%;
+    padding: 1%;
+    background-color: #A5C9CA;
+    border-radius: 10px;
+}
+
+.section-image{
+    width: 100%;
+    border-radius: 10px;
+}
+/*
+    Color Palette:
+    #2C3333
+    #395B64
+    #A5C9CA
+    #E7F6F2
+*/

@@ -9,5 +9,4 @@
 <hr>
 میتونین برای اینکه تمرین کنین به اخر این فایل اسمتون رو به همراه آیدی گیتهابتون قرار بدین!
 <br>
-1. <a herf="https://github.com/Amirmahdikahdouii">Amir mahdi Kahdouii</a>
-...
+<a href="https://github.com/Amirmahdikahdouii">Amir mahdi Kahdouii</a> <br>

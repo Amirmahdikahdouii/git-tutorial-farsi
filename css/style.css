@@ -134,7 +134,7 @@ body {
     justify-content: space-between;
 }
 
-.section-code-row>svg {
+.section-code-row>i {
     cursor: pointer;
 }
 
@@ -161,7 +161,8 @@ body {
     }
 }
 
-svg[cssClass="copy-icon"] {
+i[cssClass="copy-icon"] {
+    font-size: 20px;
     display: block;
     color: #A5C9CA;
     animation-name: showCopyIcon;
@@ -171,7 +172,8 @@ svg[cssClass="copy-icon"] {
     transition: all 300ms;
 }
 
-svg[cssClass="copy-icon-done"] {
+i[cssClass="copy-icon-done"] {
+    font-size: 20px;
     display: none;
     animation-name: hideCopyIcon;
     animation-duration: 500ms;
@@ -180,11 +182,11 @@ svg[cssClass="copy-icon-done"] {
 
 }
 
-svg[cssClass="copy-icon"]:hover {
+i[cssClass="copy-icon"]:hover {
     color: #395B64;
 }
 
-svg[cssClass="copy-icon-hide"] {
+i[cssClass="copy-icon-hide"] {
     animation-name: hideCopyIcon;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
@@ -192,7 +194,8 @@ svg[cssClass="copy-icon-hide"] {
     display: none;
 }
 
-svg[cssClass="copy-icon-done-show"] {
+i[cssClass="copy-icon-done-show"] {
+    font-size: 20px;
     animation-name: showCopyIcon;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
@@ -207,8 +210,12 @@ svg[cssClass="copy-icon-done-show"] {
     align-items: center;
 }
 
-.code-body-container>svg {
+.code-body-container>i {
     color: #485563;
+}
+
+.bi-currency-dollar{
+    font-size: 20px;
 }
 
 .code-input,
